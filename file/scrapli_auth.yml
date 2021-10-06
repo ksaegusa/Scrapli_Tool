@@ -1,0 +1,12 @@
+---
+- host: 10.100.0.148
+  auth_username: cisco
+  auth_password: cisco
+  auth_strict_key: False
+  platform: cisco_iosxe
+
+- host: 10.100.0.149
+  auth_username: cisco
+  auth_password: cisco
+  auth_strict_key: False
+  platform: cisco_iosxe

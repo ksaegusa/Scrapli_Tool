@@ -1,0 +1,4 @@
+ntc-templates==2.3.2
+PyYAML==5.4.1
+scrapli==2021.7.30
+textfsm==1.1.2
