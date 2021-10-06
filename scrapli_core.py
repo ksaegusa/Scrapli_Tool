@@ -1,5 +1,7 @@
-from scrapli import Scrapli
+import re
 import logging
+
+from scrapli import Scrapli
 from dataclasses import dataclass
 
 # logging.basicConfig(level=logging.DEBUG, format='%(processName)s: %(message)s')
@@ -31,9 +33,9 @@ def send_command(connection, commands, host):
                 output_list.append(res_command.result)
     except Exception as e:
         print(f'Send Commnad Error!: {command} >> {e}')
-
     responce_command_to_text(host, commands, output_list)
 
+# TODO: Error処理書く
 def responce_command_to_text(host, commands,output_list):
     filename = f"output/{host}.log"
     with open(filename, mode='a') as f:
@@ -50,12 +52,13 @@ def configure_replace_to_startup(connection):
         print(f'Configure Replace Error!: {e}')
 
 # スレッド処理の実行部分
+# HACK: コマンドをここに書いてるのがイケてない
 def _run(config):
     net,error_flag, host = login(config)
     try:
         if not error_flag:
             commands = [
-                "show run",
+                "show rwun",
             ]
             send_command(net, commands, host)
     finally:
