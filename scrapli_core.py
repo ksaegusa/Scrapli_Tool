@@ -1,7 +1,3 @@
-#################################################################
-# Netmiko並列実行
-#
-#################################################################
 from scrapli import Scrapli
 import logging
 from dataclasses import dataclass
