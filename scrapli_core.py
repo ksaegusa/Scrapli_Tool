@@ -56,8 +56,6 @@ def _run(config):
         if not error_flag:
             commands = [
                 "show run",
-                "configure replace nvram:startup-config list force",
-                "show run",
             ]
             send_command(net, commands, host)
     finally:
