@@ -1,0 +1,4 @@
+---
+cisco_iosxe:
+  - show ip access-list
+  - show ip route

@@ -1,12 +1,18 @@
 ---
-- host: 10.100.0.148
+- device_name: Router01
+  host: 52.192.48.0
   auth_username: cisco
   auth_password: cisco
-  auth_strict_key: False
   platform: cisco_iosxe
 
-- host: 10.100.0.149
+- device_name: Router02
+  host: 52.192.48.0
   auth_username: cisco
   auth_password: cisco
-  auth_strict_key: False
+  platform: cisco_iosxe
+
+- device_name: Router03
+  host: 52.192.48.0
+  auth_username: cisco
+  auth_password: cisco
   platform: cisco_iosxe
